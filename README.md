@@ -12,7 +12,7 @@
 ### 动态规划状态转移方程：记i为考虑共需找零i元时的最少硬币数，则
 
 ```
-dp[i]= min(dp[i],dp[i-coin]+1)   (i>coin)
+dp[i]=min(dp[i],dp[i-coin]+1)   (i>coin)
      =1                          (i==coin)
      =dp[i]                      (i<coin)
 #（其中i需从1到n遍历一遍，为外循环；coin硬币数组也需要遍历一遍，为各个i中的内循环。）
@@ -30,6 +30,6 @@ dp[i]= min(dp[i],dp[i-coin]+1)   (i>coin)
 ### 解法二：动态规划（状态转移方程：记i,j为考虑前i件物品且背包最多装j单位容量情况下的最大总价值，则
 
 ```
-dp[i][j]=max(dp[i-1][j],dp[i][j-w[i]]+v[i])  (j>w[i])
+dp[i][j]=max(dp[i-1][j],dp[i-1][j-w[i]]+v[i])  (j>w[i])
         =dp[i-1][j]                          (j<=w[i])
 ```
