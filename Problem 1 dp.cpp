@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>   用到 max/min 等函数
-using name space std;
+using namespace std;
 int main(){
   int n,k;
   scanf("%d %d",&n,&k);//读取控制台的总零钱n以及硬币种类k,也可以用“cin>>n>>k;”语句
@@ -8,7 +8,7 @@ int main(){
   for(int i=0;i<k;i++){
     scanf("%d",&coin[i]);
   }
-  int dp[100]=0;//创建动态规划数组
+  int dp[100]={0};//创建动态规划数组
   //动态规划数组初始化
   for(int i=1;i<=n;i++){
     dp[i]=n+1;//设为较大的初始值，便于后续数组元素的更新
