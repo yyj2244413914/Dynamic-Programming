@@ -13,8 +13,8 @@
 
 ```
 dp[i]= min(dp[i],dp[i-coin]+1)   (i>coin)
-         =1                          (i==coin)
-         =dp[i]                      (i<coin)
+     =1                          (i==coin)
+     =dp[i]                      (i<coin)
 #（其中i需从1到n遍历一遍，为外循环；coin硬币数组也需要遍历一遍，为各个i中的内循环。）
 ```
 ## 0-1背包问题：
@@ -31,5 +31,5 @@ dp[i]= min(dp[i],dp[i-coin]+1)   (i>coin)
 
 ```
 dp[i][j]=max(dp[i-1][j],dp[i][j-w[i]]+v[i])  (j>w[i])
-           =dp[i-1][j]                          (j<=w[i])
+        =dp[i-1][j]                          (j<=w[i])
 ```
