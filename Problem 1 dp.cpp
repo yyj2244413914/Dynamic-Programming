@@ -1,5 +1,4 @@
-#include <iostream>
-#include <algorithm>   用到 max/min 等函数
+#include<bits/stdc++.h>//一次性包含所有标准库，无需手动添加
 using namespace std;
 int main(){
   int n,k;
