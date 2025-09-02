@@ -18,7 +18,7 @@ int main(){
      =dp[i]                      (i<coin)
 #（其中i需从1到n遍历一遍，为外循环；coin硬币数组也需要遍历一遍，为各个i中的内循环。）
 */
-  for(int i=1;i<=n;i+=){
+  for(int i=1;i<=n;i++){
     for(int j=0;j<k;j++){
       if(i>coin[j])dp[i]=min(dp[i],dp[i-coin[j]]+1);
       if(i==coin[j])dp[i]=1;
