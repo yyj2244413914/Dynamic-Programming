@@ -22,6 +22,7 @@
 dp[i]=dp[i-1]+dp[i-2]
 #（第i阶跳法总数等于在第i-1阶时跳一级或者在第i-2阶时跳两级，同时这也是斐波那契数列）
 ```
+[problem_1 c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem1dp.cpp)
 ## Problem 2 路径问题（二维DP）
 <a name="problem2"></a>
 一个机器人位于一个 m x n 网格的左上角（起始点在下图中标记为 “Start”）。机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。问总共有多少条不同的路径？
