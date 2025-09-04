@@ -8,8 +8,9 @@
 * [Problem 5 最大子链（线性）问题（一维DP）](#problem5)
 * [Problem 6 最大子链（环形）问题（一维DP）](#problem6)
 * [Problem 7 最大子链（子链长度给定）问题（一维DP）](#problem7)
-## Problem 1 爬楼梯问题（一维DP）
 <a name="problem1"></a>
+## Problem 1 爬楼梯问题（一维DP）
+
 一只青蛙一次可以跳上一级或两级台阶，求该青蛙跳上n级台阶共有多少种跳法。
 
 **输入格式**：输入n的值。
@@ -23,8 +24,9 @@ dp[i]=dp[i-1]+dp[i-2]
 #（第i阶跳法总数等于在第i-1阶时跳一级或者在第i-2阶时跳两级，同时这也是斐波那契数列）
 ```
 [problem_1 c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem1dp.cpp)
-## Problem 2 路径问题（二维DP）
 <a name="problem2"></a>
+## Problem 2 路径问题（二维DP）
+
 一个机器人位于一个 m x n 网格的左上角（起始点在下图中标记为 “Start”）。机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。问总共有多少条不同的路径？
 ![](problem2.jpg)
 
@@ -40,8 +42,9 @@ dp[i][j]=dp[i-1][j]+dp[i][j-1]
 ```
 
 [problem_2 c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem2dp.cpp)
-## Problem 3 找硬币问题（一维DP）：
 <a name="problem3"></a>
+## Problem 3 找硬币问题（一维DP）：
+
 店员给顾客找零钱，已知共需要找出n元钱，并且有k种硬币面值，问最少需要几枚硬币。
 
 **输入格式**：第一行输入目标总零钱数n和硬币种类数k；第二行及以下k行输入每种硬币对应的面值。
@@ -58,8 +61,9 @@ dp[i]=min(dp[i],dp[i-coin]+1)   (i>coin)
 ```
 
 [problem_3 c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem3dp.cpp)
-## Problem 4 0-1背包问题（二维DP）：
 <a name="problem4"></a>
+## Problem 4 0-1背包问题（二维DP）：
+
 有 n 件物品，每件物品有重量 w [i] 和价值 v [i]，背包的最大容量为 C。每件物品只能选择放入或不放入背包，求能放入背包的最大总价值。
 
 **输入格式**：第一行输入背包最大容量c和物品件数n；第二行及以下n行输入每件物品的重量和价值。
@@ -77,8 +81,9 @@ dp[i][j]=max(dp[i-1][j],dp[i-1][j-w[i]]+v[i])  (j>w[i])
 
 [problem_4 解法一c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem4BF.cpp)
 [problem_4 解法二c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem4dp.cpp)
-## Problem 5 最大子链（线性）问题（一维DP）：
 <a name="problem5"></a>
+## Problem 5 最大子链（线性）问题（一维DP）：
+
 在线性(首尾不相连）的数组或序列中寻找最大子链（通常也叫最大子数组、最大子段等），例如给定一个整数数组 nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]，目标是找出其中连续元素之和最大的子数组。
 
 **输入格式**：输入目标数组nums，以空格分隔，回车即停止输入。
