@@ -5,6 +5,9 @@
 * [Problem 2 路径问题（二维DP）](#problem2)
 * [Problem 3 找硬币问题（一维DP）](#problem3)
 * [Problem 4 0-1背包问题（二维DP）](#problem4)
+* [Problem 5 最大子链（线性）问题1](#problem5)
+* [Problem 6 最大子链（环形）问题](#problem6)
+* [Problem 7 最大子链（子链长度给定）问题](#problem7)
 ## Problem 1 爬楼梯问题（一维DP）
 <a name="problem1"></a>
 一只青蛙一次可以跳上一级或两级台阶，求该青蛙跳上n级台阶共有多少种跳法。
@@ -67,3 +70,19 @@ dp[i]=min(dp[i],dp[i-coin]+1)   (i>coin)
 dp[i][j]=max(dp[i-1][j],dp[i-1][j-w[i]]+v[i])  (j>w[i])
         =dp[i-1][j]                            (j<=w[i])
 ```
+## Problem 5 最大子链（线性）问题：
+<a name="problem5"></a>
+在线性(首尾不相连）的数组或序列中寻找最大子链（通常也叫最大子数组、最大子段等），例如给定一个整数数组 nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]，目标是找出其中连续元素之和最大的子数组。
+**输入格式**：输入目标数组nums。
+
+**输出格式**：输出最大子链的元素之和。
+
+### 动态规划状态转移方程：记以当前元素nums[i]结尾的最大子链为current_MAX[i],遍历至nums[i]时（即考虑前i个元素时）的全局最大子链为global-MAX[i]，则：
+
+```
+current_MAX[i]=max(current_MAX[i-1]+nums[i],nums[i]);
+global_MAX[i]=max(global_MAX[i-1],current_MAX[i]);
+#(current_MAX的作用是记录以当前第i个元素结尾的最大子链，这一最大子链有且只有两种情况：要么是以第i-1个元素结尾的最大子链加上第i个元素，要么就只是第i个元素自己构成最大子链（当以第i-1个元素结尾的最大子链为负数时）
+
+#（global_MAX的作用是比较以第i-1个元素结尾的最大子链与第i个元素结尾的最大子链，从而得到全局最优解）
+
