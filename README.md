@@ -5,9 +5,9 @@
 * [Problem 2 路径问题（二维DP）](#problem2)
 * [Problem 3 找硬币问题（一维DP）](#problem3)
 * [Problem 4 0-1背包问题（二维DP）](#problem4)
-* [Problem 5 最大子链（线性）问题](#problem5)
-* [Problem 6 最大子链（环形）问题](#problem6)
-* [Problem 7 最大子链（子链长度给定）问题](#problem7)
+* [Problem 5 最大子链（线性）问题（一维DP）](#problem5)
+* [Problem 6 最大子链（环形）问题（一维DP）](#problem6)
+* [Problem 7 最大子链（子链长度给定）问题（一维DP）](#problem7)
 ## Problem 1 爬楼梯问题（一维DP）
 <a name="problem1"></a>
 一只青蛙一次可以跳上一级或两级台阶，求该青蛙跳上n级台阶共有多少种跳法。
@@ -70,7 +70,7 @@ dp[i]=min(dp[i],dp[i-coin]+1)   (i>coin)
 dp[i][j]=max(dp[i-1][j],dp[i-1][j-w[i]]+v[i])  (j>w[i])
         =dp[i-1][j]                            (j<=w[i])
 ```
-## Problem 5 最大子链（线性）问题：
+## Problem 5 最大子链（线性）问题（一维DP）：
 <a name="problem5"></a>
 在线性(首尾不相连）的数组或序列中寻找最大子链（通常也叫最大子数组、最大子段等），例如给定一个整数数组 nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]，目标是找出其中连续元素之和最大的子数组。
 **输入格式**：输入目标数组nums。
