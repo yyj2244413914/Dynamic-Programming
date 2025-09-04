@@ -39,6 +39,7 @@ dp[i][j]=dp[i-1][j]+dp[i][j-1]
 #（相当于在走到点(i-1,j)的基础上向右走一格，或者是在点(i,j-1)的基础上向下走一格）
 ```
 
+[problem_2 c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem2dp.cpp)
 ## Problem 3 找硬币问题（一维DP）：
 <a name="problem3"></a>
 店员给顾客找零钱，已知共需要找出n元钱，并且有k种硬币面值，问最少需要几枚硬币。
@@ -55,6 +56,8 @@ dp[i]=min(dp[i],dp[i-coin]+1)   (i>coin)
      =dp[i]                      (i<coin)
 #（其中i需从1到n遍历一遍，为外循环；coin硬币数组也需要遍历一遍，为各个i中的内循环。）
 ```
+
+[problem_3 c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem3dp.cpp)
 ## Problem 4 0-1背包问题（二维DP）：
 <a name="problem4"></a>
 有 n 件物品，每件物品有重量 w [i] 和价值 v [i]，背包的最大容量为 C。每件物品只能选择放入或不放入背包，求能放入背包的最大总价值。
@@ -71,6 +74,9 @@ dp[i]=min(dp[i],dp[i-coin]+1)   (i>coin)
 dp[i][j]=max(dp[i-1][j],dp[i-1][j-w[i]]+v[i])  (j>w[i])
         =dp[i-1][j]                            (j<=w[i])
 ```
+
+[problem_4 解法一c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem4BF.cpp)
+[problem_4 解法二c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem4dp.cpp)
 ## Problem 5 最大子链（线性）问题（一维DP）：
 <a name="problem5"></a>
 在线性(首尾不相连）的数组或序列中寻找最大子链（通常也叫最大子数组、最大子段等），例如给定一个整数数组 nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]，目标是找出其中连续元素之和最大的子数组。
@@ -87,4 +93,6 @@ global_MAX[i]=max(global_MAX[i-1],current_MAX[i]);
 #(current_MAX的作用是记录以当前第i个元素结尾的最大子链，这一最大子链有且只有两种情况：要么是以第i-1个元素结尾的最大子链加上第i个元素，要么就只是第i个元素自己构成最大子链（当以第i-1个元素结尾的最大子链为负数时）
 
 #（global_MAX的作用是比较以第i-1个元素结尾的最大子链与第i个元素结尾的最大子链，从而得到全局最优解）
+```
 
+[problem_5 c++代码](https://github.com/yyj2244413914/Dynamic-Programming/blob/main/Problem5dp.cpp)
